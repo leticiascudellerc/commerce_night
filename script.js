@@ -52,3 +52,23 @@ function animateTimeline() {
 
 window.addEventListener('scroll', animateTimeline);
 animateTimeline();
+
+const slides = document.querySelector('.slides');
+const dots = document.querySelectorAll('.dot');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+let current = 0;
+const total = document.querySelectorAll('.slide').length;
+
+function goToSlide(index) {
+  current = (index + total) % total;
+  slides.style.transform = `translateX(-${current * 100}%)`;
+  dots.forEach(dot => dot.classList.remove('active'));
+  dots[current].classList.add('active');
+}
+
+prevBtn.addEventListener('click', () => goToSlide(current - 1));
+nextBtn.addEventListener('click', () => goToSlide(current + 1));
+dots.forEach((dot, i) => dot.addEventListener('click', () => goToSlide(i)));
+
+setInterval(() => goToSlide(current + 1), 5000);
