@@ -27,3 +27,28 @@ function animateCounter(element, target, duration = 2000) {
 }, { threshold: 0.5 });
 const aboutStats = document.querySelector('.about-stats');
 if (aboutStats) observer.observe(aboutStats);
+
+function animateTimeline() {
+  const timeline = document.querySelector('.timeline');
+  const progress = document.querySelector('.timeline-progress');
+  const items = document.querySelectorAll('.timeline-item');
+
+  if (!timeline || !progress) return;
+
+  const timelineTop = timeline.getBoundingClientRect().top + window.scrollY;
+  const timelineHeight = timeline.offsetHeight;
+  const scrolled = window.scrollY + window.innerHeight * 0.7;
+  const percent = Math.min(Math.max((scrolled - timelineTop) / timelineHeight, 0), 1);
+
+  progress.style.height = (percent * 100) + '%';
+
+  items.forEach(item => {
+    const itemTop = item.getBoundingClientRect().top + window.scrollY;
+    if (scrolled > itemTop) {
+      item.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', animateTimeline);
+animateTimeline();

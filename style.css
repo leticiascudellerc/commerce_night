@@ -287,3 +287,94 @@ h1, h2, h3 {
   color: var(--white-dim);
   margin-bottom: 0;
 }
+/* ── ITINERARY ── */
+#itinerary {
+  background: var(--navy-mid);
+  padding: 8rem 2rem;
+  text-align: center;
+}
+
+#itinerary h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  color: var(--white);
+  margin-bottom: 5rem;
+}
+
+.timeline {
+  max-width: 650px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: var(--gold-dim);
+}
+
+.timeline-progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 0%;
+  background: linear-gradient(180deg, var(--gold-light), var(--gold));
+  box-shadow: 0 0 8px var(--gold), 0 0 20px var(--gold);
+  transition: height 0.1s ease;
+  z-index: 2;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+  text-align: left;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2.4rem;
+  top: 0.4rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold-dim);
+  border: 1px solid var(--gold);
+  transition: background 0.3s, box-shadow 0.3s;
+  z-index: 3;
+}
+
+.timeline-item.active::before {
+  background: var(--gold);
+  box-shadow: 0 0 8px var(--gold), 0 0 15px var(--gold);
+}
+
+.time {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  min-width: 80px;
+  padding-top: 0.2rem;
+}
+
+.timeline-content h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  color: var(--white);
+  margin-bottom: 0.3rem;
+}
+
+.timeline-content p {
+  font-size: 0.75rem;
+  color: var(--white-dim);
+  letter-spacing: 0.1em;
+}
