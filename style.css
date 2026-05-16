@@ -378,11 +378,13 @@ h1, h2, h3 {
   color: var(--white-dim);
   letter-spacing: 0.1em;
 }
+
 /* ── AWARDS ── */
 #awards {
   background: var(--navy);
-  padding: 8rem 0;
+  padding: 8rem 0 0 0;
   text-align: center;
+  position: relative;
 }
 
 #awards h2 {
@@ -511,6 +513,19 @@ h1, h2, h3 {
   width: 20px;
   border-radius: 3px;
 }
+.awards-wave {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.awards-wave svg {
+  display: block;
+  width: 100%;
+}
 /* ── REMINDERS ── */
 #reminders {
   background: var(--navy-mid);
@@ -566,4 +581,52 @@ h1, h2, h3 {
   color: var(--white-dim);
   line-height: 1.8;
   letter-spacing: 0.05em;
+}
+
+/* ── TICKETS ── */
+#tickets {
+  background: var(--navy);
+  padding: 8rem 2rem;
+  text-align: center;
+}
+
+.tickets-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#tickets h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+#tickets p {
+  font-size: 0.85rem;
+  color: var(--white-dim);
+  letter-spacing: 0.1em;
+  margin-bottom: 3rem;
+  line-height: 2;
+}
+
+.tickets-cta {
+  display: inline-block;
+  padding: 1.2rem 3.5rem;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  text-decoration: none;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.tickets-cta:hover {
+  background: var(--gold);
+  color: var(--navy);
+  box-shadow:
+    0 0 5px var(--gold),
+    0 0 25px var(--gold),
+    0 0 50px var(--gold);
 }
