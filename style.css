@@ -1,0 +1,17 @@
+
+:root {
+  --navy: #0a1628;
+  --navy-mid: #0d2044;
+  --navy-light: #123060;
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --gold-dim: #8a6e2f;
+  --white: #f5f0e8;
+  --white-dim: rgba(245, 240, 232, 0.7);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
