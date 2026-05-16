@@ -103,3 +103,15 @@ h1, h2, h3 {
     justify-content: center;
     overflow: hidden;
 }
+.ocean-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+    #060e1c 0%,
+    #081428 15%,
+    #0a1c3a 35%,
+    #0d2550 55%,
+    #102d60 75%,
+    #0a1c3a 100%
+  );
+}
