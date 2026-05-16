@@ -630,3 +630,61 @@ h1, h2, h3 {
     0 0 25px var(--gold),
     0 0 50px var(--gold);
 }
+footer {
+  background: var(--navy);
+  padding: 4rem 2rem;
+  text-align: center;
+  border-top: 1px solid var(--gold-dim);
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  color: var(--gold);
+  letter-spacing: 0.4em;
+  margin-bottom: 0.5rem;
+}
+
+.footer-event {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  color: var(--white);
+  letter-spacing: 0.2em;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.footer-date {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: var(--white-dim);
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.footer-divider {
+  width: 60px;
+  height: 1px;
+  background: var(--gold-dim);
+  margin: 0 auto 2rem;
+}
+
+.footer-copy {
+  font-size: 0.65rem;
+  color: var(--white-dim);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.footer-made {
+  font-size: 0.6rem;
+  color: var(--gold-dim);
+  letter-spacing: 0.15em;
+  font-style: italic;
+  margin-top: 1rem;
+}
